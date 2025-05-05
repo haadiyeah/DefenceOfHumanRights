@@ -29,7 +29,7 @@ function GetInvolvedSection() {
             <div className="bg-red-950 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">Report a Case</h3>
               <p className="mb-4">
-                If you know of someone who has disappeared, contact us to report the case and receive guidance on the next steps.
+                If you know of someone who has disappeared, contact us to report the case and receive guidance on the next steps. This is crucial to maintain and document records.
               </p>
               <button className="w-full py-3 bg-white text-red-900 font-medium rounded hover:bg-gray-200 transition-colors">
                 Report a Disappearance

@@ -5,7 +5,7 @@ function Navbar() {
 
     return (
       <nav className="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:flex md:justify-between md:items-center">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <h1 className="text-2xl font-bold text-red-900">DHR Pakistan</h1>

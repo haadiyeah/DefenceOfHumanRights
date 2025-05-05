@@ -1,7 +1,15 @@
+import bgImage from '../../assets/children.png'
+
 function HeroA() {
     return (
-      <div className="relative bg-gray-900 text-white">
-        {/* Replace with your own emotional image */}
+      <div 
+        className="relative bg-gray-900 text-white"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
           <div className="max-w-2xl">

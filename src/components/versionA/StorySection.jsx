@@ -1,3 +1,6 @@
+import janjuaFamilySearchPicture from '../../assets/kids-protest.png'
+import communityOfHopePicture from '../../assets/protest.png'
+
 function StorySection() {
     return (
       <section id="stories" className="py-16 bg-white">
@@ -6,9 +9,12 @@ function StorySection() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <div className="mb-4 h-48 bg-gray-200">
-                {/* Replace with actual image */}
-                <div className="w-full h-full flex items-center justify-center text-gray-400">Family Photo Placeholder</div>
+              <div className="mb-4 h-48">
+                <img 
+                  src={janjuaFamilySearchPicture} 
+                  alt="Children protesting for their missing family members" 
+                  className="w-full h-full object-cover rounded"
+                />
               </div>
               <h3 className="text-xl font-bold mb-3">The Janjua Family's Search</h3>
               <p className="text-gray-700 mb-4">
@@ -18,9 +24,12 @@ function StorySection() {
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <div className="mb-4 h-48 bg-gray-200">
-                {/* Replace with actual image */}
-                <div className="w-full h-full flex items-center justify-center text-gray-400">Protest Photo Placeholder</div>
+              <div className="mb-4 h-48">
+                <img 
+                  src={communityOfHopePicture} 
+                  alt="Community members protesting" 
+                  className="w-full h-full object-cover rounded"
+                />
               </div>
               <h3 className="text-xl font-bold mb-3">A Community of Hope</h3>
               <p className="text-gray-700 mb-4">

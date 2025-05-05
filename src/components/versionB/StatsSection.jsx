@@ -1,7 +1,18 @@
+import bgImage from '../../assets/protest.png'; 
+
 function StatsSection() {
     return (
-      <section id="stats" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="stats" className="py-16 relative">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: '0.1'
+          }}
+        ></div>
+        <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Impact in Numbers</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
@@ -32,25 +43,39 @@ function StatsSection() {
           </div>
           
           <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-4">Our Strategic Approach</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center">
-                <span className="inline-block mr-3 w-4 h-4 bg-red-900 rounded-full"></span>
-                <span>Legal support for 1,100+ families seeking justice</span>
-              </li>
-              <li className="flex items-center">
-                <span className="inline-block mr-3 w-4 h-4 bg-red-900 rounded-full"></span>
-                <span>Psychosocial support programs for 800+ affected individuals</span>
-              </li>
-              <li className="flex items-center">
-                <span className="inline-block mr-3 w-4 h-4 bg-red-900 rounded-full"></span>
-                <span>50+ advocacy campaigns resulting in policy changes</span>
-              </li>
-              <li className="flex items-center">
-                <span className="inline-block mr-3 w-4 h-4 bg-red-900 rounded-full"></span>
-                <span>25+ investigative reports published since founding</span>
-              </li>
-            </ul>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="order-2 md:order-1">
+                <h3 className="text-xl font-bold mb-4">Our Strategic Approach</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <span className="inline-block mr-3 w-4 h-4 bg-red-900 rounded-full"></span>
+                    <span>Legal support for 1,100+ families seeking justice</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="inline-block mr-3 w-4 h-4 bg-red-900 rounded-full"></span>
+                    <span>Psychosocial support programs for 800+ affected individuals</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="inline-block mr-3 w-4 h-4 bg-red-900 rounded-full"></span>
+                    <span>50+ advocacy campaigns resulting in policy changes</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="inline-block mr-3 w-4 h-4 bg-red-900 rounded-full"></span>
+                    <span>25+ investigative reports published since founding</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="order-1 md:order-2">
+                <div 
+                  className="w-full h-64 md:h-full rounded-lg"
+                  style={{
+                    backgroundImage: `url(${bgImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+              </div>
+            </div>
           </div>
           
           <div className="mt-12 text-center">

@@ -1,3 +1,7 @@
+import photo1 from '../../assets/children.png'
+import photo2 from '../../assets/protest.png'
+
+
 function TestimonialSection() {
     return (
       <section id="testimonials" className="py-16 bg-gray-100">
@@ -7,9 +11,7 @@ function TestimonialSection() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="h-16 w-16 bg-gray-200 rounded-full mr-4">
-                  {/* Replace with actual image */}
-                </div>
+                <img src={photo1} alt="Fatima K." className="h-16 w-16 rounded-full mr-4 object-cover" />
                 <div>
                   <h3 className="font-bold">Fatima K.</h3>
                   <p className="text-gray-600">Family member of a released person</p>
@@ -22,9 +24,7 @@ function TestimonialSection() {
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="h-16 w-16 bg-gray-200 rounded-full mr-4">
-                  {/* Replace with actual image */}
-                </div>
+                <img src={photo2} alt="Ahmed S." className="h-16 w-16 rounded-full mr-4 object-cover" />
                 <div>
                   <h3 className="font-bold">Ahmed S.</h3>
                   <p className="text-gray-600">Human rights activist</p>
