@@ -13,8 +13,17 @@ function TestimonialSection() {
   };
 
   return (
-    <section id="testimonials" className="py-16 bg-gray-100">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="relative py-16">
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: `url(${photo1})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: '0.1'
+        }}
+      />
+      <div className="container relative z-10 mx-auto px-4">
         <ScrollReveal>
           <h2 className="text-3xl font-bold mb-12 text-center">Voices of Hope</h2>
         </ScrollReveal>

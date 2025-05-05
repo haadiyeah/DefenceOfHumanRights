@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../../assets/DHR-LOGO.png'
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,6 +9,7 @@ function Navbar() {
         <div className="container mx-auto px-4 md:flex md:justify-between md:items-center">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
+              <img src={logo} alt="DHR Logo" className="h-10 w-10 mr-2" />
               <h1 className="text-2xl font-bold text-red-900">DHR Pakistan</h1>
             </div>
             

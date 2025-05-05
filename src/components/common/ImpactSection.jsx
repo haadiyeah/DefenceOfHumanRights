@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ScrollReveal } from './ScrollReveal';
+import bgImage from '../../assets/protest.png';
 
 function ImpactSection() {
   const cardHoverVariants = {
@@ -11,10 +12,19 @@ function ImpactSection() {
   };
 
   return (
-    <section id="impact" className="py-16 bg-gray-100">
+    <section 
+      id="impact" 
+      className="py-16 relative"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="container mx-auto px-4">
         <ScrollReveal>
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Impact Areas</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-white">Our Impact Areas</h2>
         </ScrollReveal>
         
         <div className="grid md:grid-cols-3 gap-8">
