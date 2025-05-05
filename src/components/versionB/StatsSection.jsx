@@ -1,47 +1,45 @@
-import bgImage from '../../assets/protest.png'; 
+import { motion } from 'framer-motion';
+import { ScrollReveal } from '../common/ScrollReveal';
+import bgImage from '../../assets/protest.png';
 
 function StatsSection() {
-    return (
-      <section id="stats" className="py-16 relative">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: '0.1'
-          }}
-        ></div>
-        <div className="container mx-auto px-4 relative z-10">
+  return (
+    <section id="stats" className="py-16 relative">
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: '0.1'
+        }}
+      ></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <ScrollReveal>
           <h2 className="text-3xl font-bold mb-12 text-center">Our Impact in Numbers</h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-red-900 mb-2">2,273</div>
-              <p className="text-gray-700">Total Cases Registered</p>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-red-900 mb-2">1,368</div>
-              <p className="text-gray-700">Still Disappeared</p>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-red-900 mb-2">582</div>
-              <p className="text-gray-700">Released Persons</p>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-red-900 mb-2">236</div>
-              <p className="text-gray-700">Traced Persons</p>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-red-900 mb-2">87</div>
-              <p className="text-gray-700">Confirmed Dead</p>
-            </div>
-          </div>
-          
+        </ScrollReveal>
+        
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+          {[2273, 1368, 582, 236, 87].map((number, index) => (
+            <ScrollReveal key={index}>
+              <motion.div 
+                className="bg-gray-50 p-6 rounded-lg shadow-md text-center"
+                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+              >
+                <div className="text-3xl font-bold text-red-900 mb-2">{number}</div>
+                <p className="text-gray-700">
+                  {index === 0 && "Total Cases Registered"}
+                  {index === 1 && "Still Disappeared"}
+                  {index === 2 && "Released Persons"}
+                  {index === 3 && "Traced Persons"}
+                  {index === 4 && "Confirmed Dead"}
+                </p>
+              </motion.div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <ScrollReveal>
           <div className="bg-gray-50 p-6 rounded-lg shadow-md">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="order-2 md:order-1">
@@ -77,13 +75,23 @@ function StatsSection() {
               </div>
             </div>
           </div>
-          
+        </ScrollReveal>
+        
+        <ScrollReveal>
           <div className="mt-12 text-center">
-            <a href="#get-involved" className="inline-block px-6 py-3 bg-red-900 text-white font-medium rounded hover:bg-red-950 transition-colors">Support Our Work</a>
+            <motion.a 
+              href="#get-involved" 
+              className="inline-block px-6 py-3 bg-red-900 text-white font-medium rounded hover:bg-red-950 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Support Our Work
+            </motion.a>
           </div>
-        </div>
-      </section>
-    );
-  }
-  
-  export default StatsSection;
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
+
+export default StatsSection;
